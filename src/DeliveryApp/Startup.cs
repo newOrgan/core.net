@@ -7,6 +7,9 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using DeliveryApp.Models;
+using MySQL.Data.Entity;
+using MySQL.Data.Entity.Extensions;
 
 namespace DeliveryApp
 {
@@ -33,6 +36,9 @@ namespace DeliveryApp
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            string connection = Configuration.GetConnectionString("DataAccessMySqlProvider");
+            services.AddDbContext<DeliveryContext>(options =>
+            options.UseMySQL(connection));
 
             // Add framework services.
             services.AddApplicationInsightsTelemetry(Configuration);
