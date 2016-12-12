@@ -1,0 +1,22 @@
+﻿@model IEnumerable<DeliveryApp.Models.Restaurants>
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Оформление заказа</title>
+</head>
+<body>
+    <div>
+     @foreach (var restaurants in Model)
+     {
+         if(restaurants.spec==ViewBag.Spec)
+         {
+             <p>@restaurants.name @restaurants.adress</p>
+          }
+     }
+
+   </div>
+</body>
+</html>
