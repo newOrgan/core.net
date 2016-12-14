@@ -16,7 +16,7 @@ namespace DeliveryApp.Controllers
         }
         public IActionResult Index(string id) 
         {
-
+            
             ViewBag.Dish = Convert.ToInt32(id.Substring(0,1));
             ViewBag.Rest = Convert.ToInt32(id.Substring(2,id.ToString().Length-2));
             return View(db.Dishes.ToList());
