@@ -1,22 +1,18 @@
 ﻿@model IEnumerable<DeliveryApp.Models.Restaurants>
 @{
-    //ViewData["Title"] = "Список еды";
-    Layout = null;
+    ViewData["Title"] = "Список еды";
+    //Layout = null;
 }
-<!DOCTYPE html>
-
-<html>
-<head>
-    <title>Магазин ЕДЫ</title>
-</head>
-<body>
-    <h3>Меню</h3>
+    <div class="blockDiv">
+        <div class="menuDiv">
+            <h3>Меню</h3>
+            <ul class="ulMenu">
+                <li><a href="~/Home/Sushi/1">Суши</a></li>
+                <li><a href="~/Home/Sushi/2">Пицца</a></li>
+                <li><a href="~/Home/Sushi/3">Фастфуд</a></li>
+                <li><a href="~/Restaurants/Index/">4</a></li>
+            </ul>
+            
+        </div>
+    </div>
     
-            <a href="~/Home/Sushi/1">Суши</a>
-            <a href="~/Home/Sushi/2">Пицца</a>
-            <a href="~/Home/Sushi/3">Фастфуд</a>
-            <a href="~/Restaurants/Index/">4</a>
-
-    
-</body>
-</html>

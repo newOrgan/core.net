@@ -1,0 +1,12 @@
+﻿body {
+}
+
+.menuDiv {
+    height: auto;
+    max-width: 50%;
+    margin: 0 auto;
+}
+.ulMenu > li
+{
+    list-style-type:none;
+}
