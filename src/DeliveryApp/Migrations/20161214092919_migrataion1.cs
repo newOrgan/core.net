@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace DeliveryApp.Migrations
 {
-    public partial class intiasd : Migration
+    public partial class migrataion1 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -31,7 +31,7 @@ namespace DeliveryApp.Migrations
                 {
                     id = table.Column<int>(nullable: false)
                         .Annotation("MySQL:AutoIncrement", true),
-                    Restaurantid = table.Column<int>(nullable: true),
+                    RestaurantID = table.Column<int>(nullable: false),
                     key = table.Column<int>(nullable: false),
                     name = table.Column<string>(nullable: true),
                     price = table.Column<double>(nullable: false),
@@ -42,11 +42,11 @@ namespace DeliveryApp.Migrations
                 {
                     table.PrimaryKey("PK_Dishes", x => x.id);
                     table.ForeignKey(
-                        name: "FK_Dishes_Restaurants_Restaurantid",
-                        column: x => x.Restaurantid,
+                        name: "FK_Dishes_Restaurants_RestaurantID",
+                        column: x => x.RestaurantID,
                         principalTable: "Restaurants",
                         principalColumn: "id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -55,9 +55,8 @@ namespace DeliveryApp.Migrations
                 {
                     id = table.Column<int>(nullable: false)
                         .Annotation("MySQL:AutoIncrement", true),
-                    Dishesid = table.Column<int>(nullable: true),
+                    DishesID = table.Column<int>(nullable: false),
                     adress = table.Column<string>(nullable: true),
-                    key = table.Column<int>(nullable: false),
                     name = table.Column<string>(nullable: true),
                     phone = table.Column<string>(nullable: true)
                 },
@@ -65,22 +64,22 @@ namespace DeliveryApp.Migrations
                 {
                     table.PrimaryKey("PK_Order", x => x.id);
                     table.ForeignKey(
-                        name: "FK_Order_Dishes_Dishesid",
-                        column: x => x.Dishesid,
+                        name: "FK_Order_Dishes_DishesID",
+                        column: x => x.DishesID,
                         principalTable: "Dishes",
                         principalColumn: "id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Dishes_Restaurantid",
+                name: "IX_Dishes_RestaurantID",
                 table: "Dishes",
-                column: "Restaurantid");
+                column: "RestaurantID");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Order_Dishesid",
+                name: "IX_Order_DishesID",
                 table: "Order",
-                column: "Dishesid");
+                column: "DishesID");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

@@ -8,8 +8,8 @@ using DeliveryApp.Models;
 namespace DeliveryApp.Migrations
 {
     [DbContext(typeof(DeliveryContext))]
-    [Migration("20161212090638_sad")]
-    partial class sad
+    [Migration("20161214092919_migrataion1")]
+    partial class migrataion1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -21,7 +21,7 @@ namespace DeliveryApp.Migrations
                     b.Property<int>("id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<int>("Restaurant");
+                    b.Property<int>("RestaurantID");
 
                     b.Property<int>("key");
 
@@ -35,6 +35,8 @@ namespace DeliveryApp.Migrations
 
                     b.HasKey("id");
 
+                    b.HasIndex("RestaurantID");
+
                     b.ToTable("Dishes");
                 });
 
@@ -43,11 +45,9 @@ namespace DeliveryApp.Migrations
                     b.Property<int>("id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<int?>("Dishesid");
+                    b.Property<int>("DishesID");
 
                     b.Property<string>("adress");
-
-                    b.Property<int>("key");
 
                     b.Property<string>("name");
 
@@ -55,7 +55,7 @@ namespace DeliveryApp.Migrations
 
                     b.HasKey("id");
 
-                    b.HasIndex("Dishesid");
+                    b.HasIndex("DishesID");
 
                     b.ToTable("Order");
                 });
@@ -80,11 +80,20 @@ namespace DeliveryApp.Migrations
                     b.ToTable("Restaurants");
                 });
 
+            modelBuilder.Entity("DeliveryApp.Models.Dishes", b =>
+                {
+                    b.HasOne("DeliveryApp.Models.Restaurants", "Restaurant")
+                        .WithMany()
+                        .HasForeignKey("RestaurantID")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
             modelBuilder.Entity("DeliveryApp.Models.Order", b =>
                 {
                     b.HasOne("DeliveryApp.Models.Dishes", "Dishes")
                         .WithMany()
-                        .HasForeignKey("Dishesid");
+                        .HasForeignKey("DishesID")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
         }
     }

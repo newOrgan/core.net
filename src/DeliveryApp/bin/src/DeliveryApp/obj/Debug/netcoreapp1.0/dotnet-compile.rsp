@@ -236,11 +236,10 @@ D:\topProjectEU\core.net\src\DeliveryApp\Program.cs
 D:\topProjectEU\core.net\src\DeliveryApp\Startup.cs
 D:\topProjectEU\core.net\src\DeliveryApp\Controllers\DishesController.cs
 D:\topProjectEU\core.net\src\DeliveryApp\Controllers\HomeController.cs
+D:\topProjectEU\core.net\src\DeliveryApp\Controllers\OrderController.cs
 D:\topProjectEU\core.net\src\DeliveryApp\Controllers\RestaurantsController.cs
-D:\topProjectEU\core.net\src\DeliveryApp\Migrations\20161211071514_intiasd.cs
-D:\topProjectEU\core.net\src\DeliveryApp\Migrations\20161211071514_intiasd.Designer.cs
-D:\topProjectEU\core.net\src\DeliveryApp\Migrations\20161212090638_sad.cs
-D:\topProjectEU\core.net\src\DeliveryApp\Migrations\20161212090638_sad.Designer.cs
+D:\topProjectEU\core.net\src\DeliveryApp\Migrations\20161214092919_migrataion1.cs
+D:\topProjectEU\core.net\src\DeliveryApp\Migrations\20161214092919_migrataion1.Designer.cs
 D:\topProjectEU\core.net\src\DeliveryApp\Migrations\DeliveryContextModelSnapshot.cs
 D:\topProjectEU\core.net\src\DeliveryApp\Models\DeliveryContext.cs
 D:\topProjectEU\core.net\src\DeliveryApp\Models\Dishes.cs

@@ -12,7 +12,7 @@ namespace DeliveryApp.Models
         public string name { get; set; } // имя фамилия покупателя
         public string adress { get; set; } // адрес покупателя
         public string phone { get; set; } // контактный телефон покупателя
-        public int key { get; set; }
+        public int DishesID { get; set; }
         public Dishes Dishes { get; set; }
     }
 }

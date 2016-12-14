@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Оформление заказа</title>
+    <title>Список еды</title>
 </head>
 <body>
     <div>
@@ -14,8 +14,10 @@
 
           if (dishes.key == ViewBag.Dish && dishes.RestaurantID == ViewBag.Rest)
           {
+              
                 <p>@dishes.name @dishes.price</p>
-                <a href="">Добавить</a>
+                
+                <a href="~/Order/Create/@dishes.id">Добавить</a>
           }
 
       }

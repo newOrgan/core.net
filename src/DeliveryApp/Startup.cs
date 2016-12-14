@@ -79,7 +79,10 @@ namespace DeliveryApp
             {
                 routes
                     .MapRoute("default", "{controller=Home}/{action=Index}/{id?}")
-                    .MapRoute("Dishes", "{controller=Dishes}/{action = Index}/{id}-{rest}" );
+                    .MapRoute("Dishes", "{controller=Dishes}/{action = Index}/{id}-{rest}")
+                    .MapRoute("Order", "{controller=Order}/{action = Create}/{id?}");
+
+
             });
         }
 

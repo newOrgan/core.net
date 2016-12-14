@@ -8,8 +8,8 @@ using DeliveryApp.Models;
 namespace DeliveryApp.Migrations
 {
     [DbContext(typeof(DeliveryContext))]
-    [Migration("20161214035640_mig1")]
-    partial class mig1
+    [Migration("20161214093104_migration2")]
+    partial class migration2
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -45,11 +45,9 @@ namespace DeliveryApp.Migrations
                     b.Property<int>("id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<int?>("Dishesid");
+                    b.Property<int>("DishesID");
 
                     b.Property<string>("adress");
-
-                    b.Property<int>("key");
 
                     b.Property<string>("name");
 
@@ -57,7 +55,7 @@ namespace DeliveryApp.Migrations
 
                     b.HasKey("id");
 
-                    b.HasIndex("Dishesid");
+                    b.HasIndex("DishesID");
 
                     b.ToTable("Order");
                 });
@@ -94,7 +92,8 @@ namespace DeliveryApp.Migrations
                 {
                     b.HasOne("DeliveryApp.Models.Dishes", "Dishes")
                         .WithMany()
-                        .HasForeignKey("Dishesid");
+                        .HasForeignKey("DishesID")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
         }
     }

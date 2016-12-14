@@ -1,0 +1,12 @@
+﻿@model IEnumerable<DeliveryApp.Models.Order>
+@{
+    ViewBag.Title = "";
+}
+<a asp-action="Create">Добавить модель</a>
+<table class="table">
+    <tr><td>Имя</td><td>Адрес</td><td>НомерТел</td><td>Номер товара</td></tr>
+    @foreach (var item in Model)
+    {
+        <tr><td>@item.name</td><td>@item.adress</td><td>@item.phone</td><td>@item.DishesID</td></tr>
+    }
+</table>
