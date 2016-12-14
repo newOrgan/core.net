@@ -13,6 +13,8 @@ namespace DeliveryApp.Models
         public double price { get; set; }
         public int type { get; set; }
         public int key { get; set; }
-        public int Restaurant { get; set; }
+        public int RestaurantID { get; set; }
+        public Restaurants Restaurant { get; set; }
+
     }
 }

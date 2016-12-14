@@ -7,6 +7,7 @@
 -debug:full
 -nostdlib
 -nologo
+
 "D:\aydysNet\core.net\src\DeliveryApp\obj\Debug\netcoreapp1.0\dotnet-compile.assemblyinfo.cs"
 -out:"D:\aydysNet\core.net\src\DeliveryApp\bin\Debug\netcoreapp1.0\DeliveryApp.dll"
 -r:"C:\Users\ОтделIT\.nuget\packages\Google.Protobuf\3.0.0\lib\netstandard1.0\Google.Protobuf.dll"
@@ -242,3 +243,4 @@
 "D:\aydysNet\core.net\src\DeliveryApp\Models\Dishes.cs"
 "D:\aydysNet\core.net\src\DeliveryApp\Models\Order.cs"
 "D:\aydysNet\core.net\src\DeliveryApp\Models\Restaurants.cs"
+

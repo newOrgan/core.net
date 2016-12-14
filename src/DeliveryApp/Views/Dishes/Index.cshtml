@@ -11,14 +11,15 @@
     <div>
       @foreach (var dishes in Model)
       {
-          
-          if (dishes.Restaurant == ViewBag.Rest )
+
+          if (dishes.key == ViewBag.Dish && dishes.RestaurantID == ViewBag.Rest)
           {
-            <p>@dishes.name @dishes.price</p>
+                <p>@dishes.name @dishes.price</p>
+                <a href="">Добавить</a>
           }
-          
+
       }
-        
+
     </div>
 </body>
 </html>
