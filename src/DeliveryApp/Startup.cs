@@ -43,9 +43,9 @@ namespace DeliveryApp
             string connection = Configuration.GetConnectionString("DataAccessMySqlProvider");
             services.AddDbContext<DeliveryContext>(options =>
             options.UseMySQL(connection));
+
             // Add framework services.
             services.AddApplicationInsightsTelemetry(Configuration);
-
             services.AddMvc();
         }
 
