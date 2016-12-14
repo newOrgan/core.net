@@ -23,6 +23,7 @@ namespace DeliveryApp.Controllers
             ViewBag.Spec = id;
             return View(db.Restaurants.ToList());
         }
-       
+        
+
     }
 }

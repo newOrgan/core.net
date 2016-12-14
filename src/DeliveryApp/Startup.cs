@@ -10,6 +10,9 @@ using Microsoft.Extensions.Logging;
 using DeliveryApp.Models;
 using MySQL.Data.Entity;
 using MySQL.Data.Entity.Extensions;
+using Microsoft.AspNetCore.Routing;
+using Microsoft.AspNetCore.Http;
+
 
 namespace DeliveryApp
 {
@@ -36,6 +39,7 @@ namespace DeliveryApp
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddRouting();
             string connection = Configuration.GetConnectionString("DataAccessMySqlProvider");
             services.AddDbContext<DeliveryContext>(options =>
             options.UseMySQL(connection));
@@ -48,6 +52,10 @@ namespace DeliveryApp
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
+            
+
+
+
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
 
@@ -69,10 +77,15 @@ namespace DeliveryApp
 
             app.UseMvc(routes =>
             {
-                routes.MapRoute(
-                    name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                routes
+                    .MapRoute("default", "{controller=Home}/{action=Index}/{id?}")
+                    .MapRoute("Dishes", "{controller=Dishes}/{action = Index}/{id}-{rest}" );
             });
+        }
+
+        private Task Handle(HttpContext context)
+        {
+            throw new NotImplementedException();
         }
     }
 }

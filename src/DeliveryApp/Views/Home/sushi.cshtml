@@ -13,7 +13,8 @@
      {
          if(restaurants.spec==ViewBag.Spec)
          {
-             <p>@restaurants.name @restaurants.adress</p>
+             <a href="~/Dishes/Index/@ViewBag.Spec-@restaurants.id">@restaurants.name</a>
+             <p>@restaurants.adress</p>
           }
      }
 

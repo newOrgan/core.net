@@ -1,0 +1,24 @@
+﻿@model IEnumerable<DeliveryApp.Models.Dishes>
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Оформление заказа</title>
+</head>
+<body>
+    <div>
+      @foreach (var dishes in Model)
+      {
+          
+          if (dishes.Restaurant == ViewBag.Rest )
+          {
+            <p>@dishes.name @dishes.price</p>
+          }
+          
+      }
+        
+    </div>
+</body>
+</html>

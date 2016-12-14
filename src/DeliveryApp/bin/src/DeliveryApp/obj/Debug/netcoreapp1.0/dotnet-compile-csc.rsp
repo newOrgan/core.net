@@ -7,8 +7,8 @@
 -debug:full
 -nostdlib
 -nologo
-"D:\topProjectEU\core.net\src\DeliveryApp\obj\Debug\netcoreapp1.0\dotnet-compile.assemblyinfo.cs"
--out:"D:\topProjectEU\core.net\src\DeliveryApp\bin\Debug\netcoreapp1.0\DeliveryApp.dll"
+"D:\topProjectEU\core.net\src\DeliveryApp\bin\src\DeliveryApp\obj\Debug\netcoreapp1.0\dotnet-compile.assemblyinfo.cs"
+-out:"D:\topProjectEU\core.net\src\DeliveryApp\bin\src\DeliveryApp\bin\Debug\netcoreapp1.0\DeliveryApp.dll"
 -r:"C:\Users\Uran\.nuget\packages\Google.Protobuf\3.0.0\lib\netstandard1.0\Google.Protobuf.dll"
 -r:"C:\Users\Uran\.nuget\packages\Microsoft.ApplicationInsights\2.1.0\lib\dotnet5.4\Microsoft.ApplicationInsights.dll"
 -r:"C:\Users\Uran\.nuget\packages\Microsoft.ApplicationInsights.AspNetCore\1.0.0\lib\netstandard1.6\Microsoft.ApplicationInsights.AspNetCore.dll"
@@ -227,7 +227,7 @@
 -r:"C:\Users\Uran\.nuget\packages\System.Threading.Timer\4.0.1\ref\netstandard1.2\System.Threading.Timer.dll"
 -r:"C:\Users\Uran\.nuget\packages\System.Xml.ReaderWriter\4.0.11\ref\netstandard1.3\System.Xml.ReaderWriter.dll"
 -r:"C:\Users\Uran\.nuget\packages\System.Xml.XDocument\4.0.11\ref\netstandard1.3\System.Xml.XDocument.dll"
--resource:"D:\topProjectEU\core.net\src\DeliveryApp\obj\Debug\netcoreapp1.0\DeliveryAppdotnet-compile.deps.json",DeliveryApp.deps.json
+-resource:"D:\topProjectEU\core.net\src\DeliveryApp\bin\src\DeliveryApp\obj\Debug\netcoreapp1.0\DeliveryAppdotnet-compile.deps.json",DeliveryApp.deps.json
 "D:\topProjectEU\core.net\src\DeliveryApp\Program.cs"
 "D:\topProjectEU\core.net\src\DeliveryApp\Startup.cs"
 "D:\topProjectEU\core.net\src\DeliveryApp\Controllers\DishesController.cs"
