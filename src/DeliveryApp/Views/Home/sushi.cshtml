@@ -1,13 +1,17 @@
 ﻿@model IEnumerable<DeliveryApp.Models.Restaurants>
 @{
-    Layout = null;
+    ViewData["Title"] = "Список еды";
+    //Layout = null;
 }
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 <head>
     <title>Список ресторанов</title>
 </head>
 <body>
+=======
+>>>>>>> 92f5d53b91acf194562fa5c23a74eb222683ac5a
     <div>
      @foreach (var restaurants in Model)
      {
@@ -17,7 +21,3 @@
              <p>@restaurants.adress</p>
           }
      }
-
-   </div>
-</body>
-</html>
