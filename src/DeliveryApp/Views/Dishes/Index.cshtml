@@ -9,10 +9,15 @@
 </head>
 <body>
     <div>
-       asdsa
-        @ViewBag.Dish
-        @ViewBag.Rest
-        asdsad
+      @foreach (var dishes in Model)
+      {
+          
+          if (dishes.Restaurant == ViewBag.Rest )
+          {
+            <p>@dishes.name @dishes.price</p>
+          }
+          
+      }
         
     </div>
 </body>

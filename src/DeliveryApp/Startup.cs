@@ -13,6 +13,7 @@ using MySQL.Data.Entity.Extensions;
 using Microsoft.AspNetCore.Routing;
 using Microsoft.AspNetCore.Http;
 
+
 namespace DeliveryApp
 {
     public class Startup
@@ -78,7 +79,7 @@ namespace DeliveryApp
             {
                 routes
                     .MapRoute("default", "{controller=Home}/{action=Index}/{id?}")
-                    .MapRoute("Dishes", "Dishes/{Dishes}/{Index}/{id}/{*rest}", new { controller = "Dishes", action = "Index",rest="",id=0});
+                    .MapRoute("Dishes", "{controller=Dishes}/{action = Index}/{id}-{rest}" );
             });
         }
 
